@@ -10,6 +10,10 @@ import { useActiveSection } from "../hooks/useActiveSection";
 
 const navLinks = [
   {
+    label: "About",
+    id: "about",
+  },
+  {
     label: "Work",
     id: "work",
   },

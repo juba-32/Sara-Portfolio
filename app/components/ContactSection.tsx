@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   FiMail,
@@ -151,7 +150,7 @@ export default function ContactSection() {
             <h3 className="text-xl font-black mb-5">Sitemap</h3>
 
             <div className="flex flex-col gap-3">
-              {["work", "skills", "offers", "contact"].map((item) => (
+              {["about", "work", "skills", "offers", "contact"].map((item) => (
                 <motion.button
                   key={item}
                   whileHover={{ x: 6 }}
