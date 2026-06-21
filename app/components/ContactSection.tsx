@@ -1,11 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  FiMail,
-  FiLinkedin,
-  FiInstagram,
-} from "react-icons/fi";
+import { FiMail, FiLinkedin, FiInstagram } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function ContactSection() {
@@ -267,7 +263,26 @@ export default function ContactSection() {
 
           <span>Social Media Manager • Content Strategist</span>
 
-          <span>Created & Designed by Ahmed Bendary</span>
+          <span>
+            Created & Designed by{" "}
+            <a
+              href="https://wa.me/201023329000"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+      font-bold
+      bg-gradient-to-r
+      from-yellow-500
+      to-orange-500
+      bg-clip-text
+      text-transparent
+      hover:opacity-80
+      transition
+    "
+            >
+              Ahmed Bendary
+            </a>
+          </span>
         </div>
       </div>
     </section>
