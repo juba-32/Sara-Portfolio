@@ -1,11 +1,8 @@
-
 "use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
 import {
-  FiCopy,
-  FiCheck,
   FiMail,
   FiLinkedin,
   FiInstagram,
@@ -14,20 +11,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function ContactSection() {
   const whatsappNumber = "201023329000";
-  const [copied, setCopied] = useState(false);
-
   const email = "sarahabdullatiefmoustafa@gmail.com";
-
-  const copyEmail = async () => {
-    await navigator.clipboard.writeText(email);
-
-    setCopied(true);
-
-    setTimeout(() => {
-      setCopied(false);
-    }, 2000);
-  };
-
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
@@ -94,38 +78,26 @@ export default function ContactSection() {
             </div>
 
             <div className="flex flex-wrap items-center gap-4 justify-center">
-              <span className="font-medium text-lg break-all text-center">
-                {email}
-              </span>
-
-              <motion.button
-                onClick={copyEmail}
+              <motion.a
+                href={`mailto:${email}`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="
-                  h-11
-                  px-5
-                  rounded-full
-                  bg-background
-                  text-foreground
-                  font-medium
-                  flex
-                  items-center
-                  gap-2
-                "
+      h-11
+      px-5
+      rounded-full
+      bg-background
+      text-foreground
+      font-medium
+      flex
+      items-center
+      gap-2
+      transition-all
+    "
               >
-                {copied ? (
-                  <>
-                    <FiCheck />
-                    Copied
-                  </>
-                ) : (
-                  <>
-                    <FiCopy />
-                    Copy
-                  </>
-                )}
-              </motion.button>
+                <FiMail className="text-lg" />
+                Email Me
+              </motion.a>
 
               <motion.a
                 href={`https://wa.me/${whatsappNumber}`}
@@ -134,18 +106,18 @@ export default function ContactSection() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="
-                  h-11
-                  px-5
-                  rounded-full
-                  bg-green-500
-                  hover:bg-green-600
-                  text-white
-                  font-medium
-                  flex
-                  items-center
-                  gap-2
-                  transition-colors
-                "
+      h-11
+      px-5
+      rounded-full
+      bg-green-500
+      hover:bg-green-600
+      text-white
+      font-medium
+      flex
+      items-center
+      gap-2
+      transition-all
+    "
               >
                 <FaWhatsapp className="text-lg" />
                 WhatsApp
@@ -302,4 +274,3 @@ export default function ContactSection() {
     </section>
   );
 }
-
