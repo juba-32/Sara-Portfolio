@@ -38,12 +38,14 @@ export default function ProjectCard({ project, onClick }: Props) {
       className="relative h-[340px] rounded-[2rem] overflow-hidden cursor-pointer group [transform-style:preserve-3d]"
     >
       {/* Image */}
-      <Image
-        src={project.logo || project.images[0]}
-        alt={project.client}
-        fill
-        className="object-cover scale-105 group-hover:scale-110 transition duration-700"
-      />
+      {project.logo && (
+        <Image
+          src={project.logo}
+          alt={project.client}
+          fill
+          className="object-cover scale-105 group-hover:scale-110 transition duration-700"
+        />
+      )}
 
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "./ui/ThemeToggle";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
-
 import { useScrollToSection } from "../hooks/useScrollToSection";
 import { useActiveSection } from "../hooks/useActiveSection";
 
@@ -30,9 +29,7 @@ const navLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
   const { scrollToSection } = useScrollToSection();
-
   const activeSection = useActiveSection(navLinks.map((link) => link.id));
 
   return (
