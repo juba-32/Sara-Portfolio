@@ -1,26 +1,67 @@
+/* app/globals.css */
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* تعريف الألوان الخاصة بالـ Light Mode متوافقة مع الـ v4 Theme Engine */
+  --color-background: hsl(0 0% 98%);
+  --color-foreground: hsl(0 0% 3%);
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(0 0% 3%);
+  --color-muted: hsl(0 0% 40%);
+  --color-accent: hsl(220 100% 50%);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  /* تعريف الألوان الخاصة بالـ Dark Mode للـ v4 */
+  --color-background: #1c1618;
+  --color-foreground: hsl(0 0% 95%);
+  --color-card: hsl(0 0% 11%);
+  --color-card-foreground: hsl(0 0% 95%);
+  --color-muted: hsl(0 0% 65%);
+  --color-accent: hsl(210 100% 60%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* استخدام الـ @utility الجديد في v4 بدلاً من الـ classes العادية إذا لزم الأمر */
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* الـ @apply هنا هيشتغل تمام لأن الـ Engine اتعرف على المتغيرات فوق */
+  @apply bg-background text-foreground antialiased transition-colors duration-300;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+.portfolio-swiper {
+  padding-bottom: 36px;
+}
+
+.portfolio-swiper .swiper-pagination {
+  bottom: 0 !important;
+}
+
+.portfolio-swiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+.portfolio-swiper .swiper-pagination-bullet-active {
+  width: 24px;
+  border-radius: 999px;
+  opacity: 1;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
