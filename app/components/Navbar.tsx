@@ -85,7 +85,7 @@ export default function Navbar() {
               cursor-pointer
             "
           >
-            SARA
+            SARAH
           </motion.button>
 
           {/* Desktop Menu */}

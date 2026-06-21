@@ -27,6 +27,7 @@ export default function ProjectCard({ project, onClick }: Props) {
 
   return (
     <motion.div
+      onClick={onClick}
       style={{ rotateX, rotateY }}
       onMouseMove={handleMouseMove}
       onMouseLeave={() => {
@@ -52,15 +53,12 @@ export default function ProjectCard({ project, onClick }: Props) {
 
       {/* Content */}
       <div className="absolute inset-0 p-6 flex flex-col justify-between">
-        
         {/* Top */}
         <div>
           <h3 className="text-black text-2xl font-black uppercase">
             {project.client}
           </h3>
-          <p className="text-black/60 text-sm">
-            {project.industry}
-          </p>
+          <p className="text-black/60 text-sm">{project.industry}</p>
         </div>
 
         {/* Bottom */}

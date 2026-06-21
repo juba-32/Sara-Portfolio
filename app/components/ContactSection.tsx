@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -9,9 +10,12 @@ import {
   FiLinkedin,
   FiInstagram,
 } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function ContactSection() {
+  const whatsappNumber = "201023329000";
   const [copied, setCopied] = useState(false);
+
   const email = "sarahabdullatiefmoustafa@gmail.com";
 
   const copyEmail = async () => {
@@ -89,17 +93,15 @@ export default function ContactSection() {
               </h2>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4">
-              <span className="font-medium text-lg">{email}</span>
+            <div className="flex flex-wrap items-center gap-4 justify-center">
+              <span className="font-medium text-lg break-all text-center">
+                {email}
+              </span>
 
               <motion.button
                 onClick={copyEmail}
-                whileHover={{
-                  scale: 1.05,
-                }}
-                whileTap={{
-                  scale: 0.95,
-                }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 className="
                   h-11
                   px-5
@@ -124,6 +126,30 @@ export default function ContactSection() {
                   </>
                 )}
               </motion.button>
+
+              <motion.a
+                href={`https://wa.me/${whatsappNumber}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="
+                  h-11
+                  px-5
+                  rounded-full
+                  bg-green-500
+                  hover:bg-green-600
+                  text-white
+                  font-medium
+                  flex
+                  items-center
+                  gap-2
+                  transition-colors
+                "
+              >
+                <FaWhatsapp className="text-lg" />
+                WhatsApp
+              </motion.a>
             </div>
           </div>
         </motion.div>
@@ -140,7 +166,7 @@ export default function ContactSection() {
         >
           {/* About */}
           <div>
-            <h3 className="text-2xl font-black mb-5">SARA </h3>
+            <h3 className="text-2xl font-black mb-5">SARA</h3>
 
             <p className="text-muted-foreground leading-relaxed">
               Social Media Manager helping brands grow through strategic
@@ -156,9 +182,7 @@ export default function ContactSection() {
               {["work", "skills", "offers", "contact"].map((item) => (
                 <motion.button
                   key={item}
-                  whileHover={{
-                    x: 6,
-                  }}
+                  whileHover={{ x: 6 }}
                   onClick={() => scrollToSection(item)}
                   className="
                     text-left
@@ -179,56 +203,73 @@ export default function ContactSection() {
 
             <div className="flex flex-col gap-4">
               <motion.a
-                whileHover={{
-                  x: 6,
-                }}
+                whileHover={{ x: 6 }}
                 href={`mailto:${email}`}
                 className="
                   flex
                   items-center
                   gap-3
                   text-muted-foreground
-                  hover:text-foreground
+                  hover:text-red-500
+                  transition-colors
                 "
               >
-                <FiMail />
+                <FiMail className="text-lg" />
                 {email}
               </motion.a>
 
               <motion.a
-                whileHover={{
-                  x: 6,
-                }}
+                whileHover={{ x: 6 }}
                 href="https://www.linkedin.com/in/sarah-kamal-7905a5412/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="
                   flex
                   items-center
                   gap-3
                   text-muted-foreground
-                  hover:text-foreground
+                  hover:text-[#0A66C2]
+                  transition-colors
                 "
               >
-                <FiLinkedin />
+                <FiLinkedin className="text-lg" />
                 LinkedIn
               </motion.a>
 
               <motion.a
-                whileHover={{
-                  x: 6,
-                }}
-                href="https://www.instagram.com/sarah.kamal.193?igsh=MXZhdHk4eHNmazAwOQ%3D%3D"
+                whileHover={{ x: 6 }}
+                href="https://www.instagram.com/sarah.kamal.193"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="
                   flex
                   items-center
                   gap-3
                   text-muted-foreground
-                  hover:text-foreground
+                  hover:text-pink-500
+                  transition-colors
                 "
               >
-                <FiInstagram />
+                <FiInstagram className="text-lg" />
                 Instagram
+              </motion.a>
+
+              <motion.a
+                whileHover={{ x: 6 }}
+                href={`https://wa.me/${whatsappNumber}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  flex
+                  items-center
+                  gap-3
+                  text-muted-foreground
+                  hover:text-green-500
+                  transition-colors
+                "
+              >
+                <FaWhatsapp className="text-lg" />
+                WhatsApp
               </motion.a>
             </div>
           </div>
@@ -261,3 +302,4 @@ export default function ContactSection() {
     </section>
   );
 }
+
