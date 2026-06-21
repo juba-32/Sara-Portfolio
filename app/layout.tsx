@@ -6,7 +6,7 @@ import { ThemeProvider } from "next-themes";
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SARA",
+  title: "SARAH",
   description: "Elevate your online presence with Sara's creative social media management.",
 };
 
