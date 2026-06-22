@@ -1,24 +1,24 @@
-import { Skill } from "../types/index";
+import { Skill } from "../types";
 
 export const skills: Skill[] = [
-   {
-    title: "Content Strategy & Planning",
-    desc: "Creating content plans aligned with business goals and audience interests."
+  {
+    title: "contentStrategy",
+    desc: "contentStrategyDesc",
   },
   {
-    title: "Engagement & Community Management",
-    desc: "Building relationships with audiences through meaningful interactions."
+    title: "engagementManagement",
+    desc: "engagementManagementDesc",
   },
   {
-    title: "Analytics & Reporting",
-    desc: "Tracking KPIs and transforming insights into actionable improvements."
+    title: "analyticsReporting",
+    desc: "analyticsReportingDesc",
   },
   {
-    title: "Paid Advertising",
-    desc: "Managing and optimizing social media advertising campaigns."
+    title: "paidAdvertising",
+    desc: "paidAdvertisingDesc",
   },
   {
-    title: "Content Scheduling",
-    desc: "Organizing and publishing content consistently across platforms."
-  }
+    title: "contentScheduling",
+    desc: "contentSchedulingDesc",
+  },
 ];

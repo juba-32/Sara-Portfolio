@@ -1,0 +1,142 @@
+{
+  "navbar": {
+    "sarah": "SARAH",
+    "about": "About",
+    "work": "Work",
+    "skills": "Skills",
+    "offers": "Offers",
+    "contact": "Contact",
+    "socialMediaManager": "Social Media Manager",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "openNavigationMenu": "Open navigation menu",
+    "closeNavigationMenu": "Close navigation menu"
+  },
+
+  "hero": {
+    "badge": "Social Media Manager",
+    "headingLine1": "Grow Your",
+    "headingLine2": "Brand On Social",
+    "headingHighlight": "Media",
+    "description": "Helping businesses grow through strategic content, audience engagement, community management, and performance-driven social media campaigns.",
+    "myWorkButton": "MY WORK",
+    "stats": {
+      "accounts": "Accounts Managed",
+      "views": "Content Views",
+      "growth": "Growth Achieved"
+    }
+  },
+
+  "about": {
+    "title": "About Sarah",
+    "name": "SARAH",
+    "description": "With a passion for digital marketing and brand storytelling, I help businesses elevate their online presence through tailored strategies, compelling content, and data-backed decisions. My mission is to create content that truly connects, drives engagement, and delivers measurable growth.",
+    "whatsapp": "WhatsApp",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "imageAlt": "Sarah portrait"
+  },
+
+  "work": {
+    "title": "MY WORK",
+    "subtitle": "Interactive campaigns & growth projects",
+    "filters": {
+      "all": "All",
+      "instagram": "Instagram",
+      "tiktok": "TikTok"
+    }
+  },
+
+  "projects": {
+    "viewProject": "View Project",
+    "clients": {
+      "rimasTravel": "RIMA'S TRAVEL",
+      "nasijAlJamal": "Nasij Al Jamal",
+      "chicket": "Chicket"
+    },
+
+    "industries": {
+      "travelTourism": "Travel & Tourism",
+      "fashion": "Fashion",
+      "foodBeverage": "Food & Beverage"
+    },
+
+    "challenges": {
+      "lowEngagement": "The account suffered from low engagement and inconsistent branding."
+    },
+
+    "metrics": {
+      "followers": "Followers",
+      "engagement": "Engagement",
+      "sales": "Sales"
+    },
+
+    "gallery": {
+      "posts": "Posts",
+      "insights": "Insights"
+    },
+    "challengeTitle": "Challenge",
+    "close": "Close"
+  },
+  
+  "skills": {
+    "badge": "Expertise",
+    "title": "MY SKILLS",
+    "description": "Helping brands grow through content strategy, audience engagement and data-driven decisions.",
+    "cta": "Let's Work Together",
+
+    "items": {
+      "contentStrategy": {
+        "title": "Content Strategy & Planning",
+        "description": "Creating content plans aligned with business goals and audience interests."
+      },
+
+      "engagementManagement": {
+        "title": "Engagement & Community Management",
+        "description": "Building relationships with audiences through meaningful interactions."
+      },
+
+      "analyticsReporting": {
+        "title": "Analytics & Reporting",
+        "description": "Tracking KPIs and transforming insights into actionable improvements."
+      },
+
+      "paidAdvertising": {
+        "title": "Paid Advertising",
+        "description": "Managing and optimizing social media advertising campaigns."
+      },
+
+      "contentScheduling": {
+        "title": "Content Scheduling",
+        "description": "Organizing and publishing content consistently across platforms."
+      }
+    }
+  },
+  
+  "contact": {
+    "available": "Available For Freelance Work",
+
+    "titleLine1": "Ready To Grow",
+    "titleLine2": "Your Brand?",
+
+    "emailMe": "Email Me",
+
+    "brand": "SARAH",
+
+    "about": "Social Media Manager helping brands grow through strategic content, audience engagement and performance-driven campaigns.",
+
+    "sitemap": "Sitemap",
+
+    "contact": "Contact",
+
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "whatsapp": "WhatsApp",
+
+    "footerRole": "Social Media Manager • Content Strategist",
+
+    "createdBy": "Created & Designed by"
+  }
+
+
+}

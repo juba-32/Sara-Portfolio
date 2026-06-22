@@ -1,12 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { skills } from "../data/skills";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiPlus, FiMinus } from "react-icons/fi";
+import { useTranslations } from "next-intl";
+
+import { skills } from "../data/skills";
 import { useScrollToSection } from "../hooks/useScrollToSection";
 
 export default function SkillsSection() {
+  const t = useTranslations("skills");
+
   const { scrollToSection } = useScrollToSection();
   const [openIndex, setOpenIndex] = useState(0);
 
@@ -15,16 +19,17 @@ export default function SkillsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left */}
-          <div className=" top-24">
+          <div>
             <span className="text-sm uppercase tracking-widest opacity-60">
-              Expertise
+              {t("badge")}
             </span>
 
-            <h2 className="text-5xl md:text-6xl font-black mt-4">MY SKILLS</h2>
+            <h2 className="text-5xl md:text-6xl font-black mt-4">
+              {t("title")}
+            </h2>
 
             <p className="mt-6 max-w-md text-muted-foreground leading-relaxed">
-              Helping brands grow through content strategy, audience engagement
-              and data-driven decisions.
+              {t("description")}
             </p>
 
             <motion.button
@@ -42,21 +47,20 @@ export default function SkillsSection() {
                 damping: 15,
               }}
               className="
-    mt-8
-    px-6
-    py-3
-    rounded-full
-    bg-foreground
-    text-background
-    font-medium
-    shadow-lg
-    relative
-    overflow-hidden
-  "
+                mt-8
+                px-6
+                py-3
+                rounded-full
+                bg-foreground
+                text-background
+                font-medium
+                shadow-lg
+                relative
+                overflow-hidden
+              "
             >
-              <span className="relative z-10">Let's Work Together</span>
+              <span className="relative z-10">{t("cta")}</span>
 
-              {/* Shine Effect */}
               <motion.span
                 initial={{ x: "-100%" }}
                 whileHover={{ x: "200%" }}
@@ -65,14 +69,14 @@ export default function SkillsSection() {
                   ease: "easeInOut",
                 }}
                 className="
-      absolute
-      inset-0
-      bg-gradient-to-r
-      from-transparent
-      via-white/30
-      to-transparent
-      skew-x-12
-    "
+                  absolute
+                  inset-0
+                  bg-gradient-to-r
+                  from-transparent
+                  via-white/30
+                  to-transparent
+                  skew-x-12
+                "
               />
             </motion.button>
           </div>
@@ -105,7 +109,9 @@ export default function SkillsSection() {
                       text-left
                     "
                   >
-                    <h3 className="font-bold text-lg">{skill.title}</h3>
+                    <h3 className="font-bold text-lg">
+                      {t(`items.${skill.title}.title`)}
+                    </h3>
 
                     {isOpen ? <FiMinus /> : <FiPlus />}
                   </button>
@@ -137,7 +143,7 @@ export default function SkillsSection() {
                             leading-relaxed
                           "
                         >
-                          {skill.desc}
+                          {t(`items.${skill.title}.description`)}
                         </p>
                       </motion.div>
                     )}

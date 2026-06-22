@@ -3,10 +3,16 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaWhatsapp, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 export default function AboutSection() {
+  const t = useTranslations("about");
+
   return (
-    <section id="about" className="min-h-screen flex items-center py-24 px-6">
+    <section
+      id="about"
+      className="min-h-screen flex items-center py-24 px-6"
+    >
       <div className="max-w-7xl mx-auto w-full">
         {/* Title */}
         <motion.div
@@ -16,7 +22,9 @@ export default function AboutSection() {
           className="flex justify-end mb-16"
         >
           <div className="flex items-center gap-5">
-            <h2 className="text-4xl md:text-6xl font-black">About Sarah </h2>
+            <h2 className="text-4xl md:text-6xl font-black">
+              {t("title")}
+            </h2>
 
             <div className="w-2 h-20 bg-yellow-500 rounded-full" />
           </div>
@@ -31,14 +39,12 @@ export default function AboutSection() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h3 className="text-2xl font-bold mb-6">SARAH</h3>
+            <h3 className="text-2xl font-bold mb-6">
+              {t("name")}
+            </h3>
 
             <p className="text-lg leading-loose text-muted max-w-xl mx-auto">
-              With a passion for digital marketing and brand storytelling, I
-              help businesses elevate their online presence through tailored
-              strategies, compelling content, and data-backed decisions. My
-              mission? To create content that truly connects, drives high
-              engagement, and delivers measurable growth.
+              {t("description")}
             </p>
 
             <div className="flex justify-center gap-8 mt-8">
@@ -46,6 +52,7 @@ export default function AboutSection() {
                 href="https://wa.me/201023329000"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={t("whatsapp")}
                 className="text-yellow-500 hover:text-green-500 transition-colors"
               >
                 <FaWhatsapp size={22} />
@@ -55,6 +62,7 @@ export default function AboutSection() {
                 href="https://www.linkedin.com/in/sarah-kamal-7905a5412/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={t("linkedin")}
                 className="text-yellow-500 hover:text-[#0A66C2] transition-colors"
               >
                 <FaLinkedinIn size={22} />
@@ -64,6 +72,7 @@ export default function AboutSection() {
                 href="https://www.instagram.com/sarah.kamal.193"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={t("instagram")}
                 className="text-yellow-500 hover:text-pink-500 transition-colors"
               >
                 <FaInstagram size={22} />
@@ -90,8 +99,8 @@ export default function AboutSection() {
               "
             >
               <Image
-                src="/assets/sara.avif"
-                alt="Sara"
+                src="/assets/sarah.avif"
+                alt={t("imageAlt")}
                 fill
                 className="object-cover"
               />

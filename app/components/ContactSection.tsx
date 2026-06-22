@@ -3,16 +3,26 @@
 import { motion } from "framer-motion";
 import { FiMail, FiLinkedin, FiInstagram } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function ContactSection() {
+  const t = useTranslations("contact");
+  const navT = useTranslations("navbar");
+
+  const locale = useLocale();
+  const isRTL = locale === "ar";
+
   const whatsappNumber = "201023329000";
   const email = "sarahabdullatiefmoustafa@gmail.com";
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
   };
+
+  const navItems = ["about", "work", "skills", "offers", "contact"];
 
   return (
     <section id="contact" className="py-24 px-6 relative">
@@ -34,7 +44,6 @@ export default function ContactSection() {
             md:p-10
           "
         >
-          {/* Light Reflection */}
           <div
             className="
               absolute
@@ -46,29 +55,29 @@ export default function ContactSection() {
 
           <div
             className="
+              relative
+              z-10
               flex
               flex-col
               md:flex-row
               justify-between
               items-center
               gap-8
-              relative
-              z-10
             "
           >
-            <div>
+            <div className={isRTL ? "text-right" : "text-left"}>
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse" />
 
                 <span className="text-xs uppercase tracking-[0.2em] opacity-80">
-                  Available For Freelance Work
+                  {t("available")}
                 </span>
               </div>
 
               <h2 className="text-3xl md:text-5xl font-black uppercase">
-                Ready To Grow
+                {t("titleLine1")}
                 <br />
-                Your Brand?
+                {t("titleLine2")}
               </h2>
             </div>
 
@@ -78,20 +87,19 @@ export default function ContactSection() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="
-      h-11
-      px-5
-      rounded-full
-      bg-background
-      text-foreground
-      font-medium
-      flex
-      items-center
-      gap-2
-      transition-all
-    "
+                  h-11
+                  px-5
+                  rounded-full
+                  bg-background
+                  text-foreground
+                  font-medium
+                  flex
+                  items-center
+                  gap-2
+                "
               >
                 <FiMail className="text-lg" />
-                Email Me
+                {t("emailMe")}
               </motion.a>
 
               <motion.a
@@ -101,21 +109,20 @@ export default function ContactSection() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="
-      h-11
-      px-5
-      rounded-full
-      bg-green-500
-      hover:bg-green-600
-      text-white
-      font-medium
-      flex
-      items-center
-      gap-2
-      transition-all
-    "
+                  h-11
+                  px-5
+                  rounded-full
+                  bg-green-500
+                  hover:bg-green-600
+                  text-white
+                  font-medium
+                  flex
+                  items-center
+                  gap-2
+                "
               >
                 <FaWhatsapp className="text-lg" />
-                WhatsApp
+                {t("whatsapp")}
               </motion.a>
             </div>
           </div>
@@ -123,54 +130,79 @@ export default function ContactSection() {
 
         {/* Footer Content */}
         <div
-          className="
+          className={`
             mt-24
             grid
             grid-cols-1
             md:grid-cols-3
             gap-14
-          "
+            ${isRTL ? "text-right" : "text-left"}
+          `}
         >
           {/* About */}
-          <div>
-            <h3 className="text-2xl font-black mb-5">SARA</h3>
+          <div
+            className={`flex flex-col ${
+              isRTL ? "items-start " : "items-start"
+            }`}
+          >
+            <h3 className="text-2xl font-black mb-5">
+              {t("brand")}
+            </h3>
 
             <p className="text-muted-foreground leading-relaxed">
-              Social Media Manager helping brands grow through strategic
-              content, audience engagement and performance-driven campaigns.
+              {t("about")}
             </p>
           </div>
 
           {/* Sitemap */}
-          <div>
-            <h3 className="text-xl font-black mb-5">Sitemap</h3>
+          <div
+            className={`flex flex-col ${
+              isRTL ? "items-start" : "items-start"
+            }`}
+          >
+            <h3 className="text-xl font-black mb-5">
+              {t("sitemap")}
+            </h3>
 
-            <div className="flex flex-col gap-3">
-              {["about", "work", "skills", "offers", "contact"].map((item) => (
+            <div
+              className={`flex flex-col gap-3 ${
+                isRTL ? "items-start" : "items-start"
+              }`}
+            >
+              {navItems.map((item) => (
                 <motion.button
                   key={item}
-                  whileHover={{ x: 6 }}
+                  whileHover={{
+                    x: isRTL ? -6 : 6,
+                  }}
                   onClick={() => scrollToSection(item)}
-                  className="
-                    text-left
+                  className={`
+                    w-fit
                     text-muted-foreground
                     hover:text-foreground
                     transition
-                  "
+                    ${isRTL ? "text-right" : "text-left"}
+                  `}
                 >
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
+                  {navT(item)}
                 </motion.button>
               ))}
             </div>
           </div>
 
           {/* Contact */}
-          <div>
-            <h3 className="text-xl font-black mb-5">Contact</h3>
+          <div
+            className={`flex flex-col ${
+              isRTL ? "items-start" : "items-start"
+            }`}
+          >
+            <h3 className="text-xl font-black mb-5">
+              {t("contact")}
+            </h3>
 
             <div className="flex flex-col gap-4">
               <motion.a
-                whileHover={{ x: 6 }}
+                whileHover={{ x: isRTL ? -6 : 6 }}
                 href={`mailto:${email}`}
                 className="
                   flex
@@ -186,7 +218,7 @@ export default function ContactSection() {
               </motion.a>
 
               <motion.a
-                whileHover={{ x: 6 }}
+                whileHover={{ x: isRTL ? -6 : 6 }}
                 href="https://www.linkedin.com/in/sarah-kamal-7905a5412/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -200,11 +232,11 @@ export default function ContactSection() {
                 "
               >
                 <FiLinkedin className="text-lg" />
-                LinkedIn
+                {t("linkedin")}
               </motion.a>
 
               <motion.a
-                whileHover={{ x: 6 }}
+                whileHover={{ x: isRTL ? -6 : 6 }}
                 href="https://www.instagram.com/sarah.kamal.193"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -218,11 +250,11 @@ export default function ContactSection() {
                 "
               >
                 <FiInstagram className="text-lg" />
-                Instagram
+                {t("instagram")}
               </motion.a>
 
               <motion.a
-                whileHover={{ x: 6 }}
+                whileHover={{ x: isRTL ? -6 : 6 }}
                 href={`https://wa.me/${whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -236,7 +268,7 @@ export default function ContactSection() {
                 "
               >
                 <FaWhatsapp className="text-lg" />
-                WhatsApp
+                {t("whatsapp")}
               </motion.a>
             </div>
           </div>
@@ -259,26 +291,28 @@ export default function ContactSection() {
             text-muted-foreground
           "
         >
-          <span>© {new Date().getFullYear()} SARA</span>
+          <span>
+            © {new Date().getFullYear()} {t("brand")}
+          </span>
 
-          <span>Social Media Manager • Content Strategist</span>
+          <span>{t("footerRole")}</span>
 
           <span>
-            Created & Designed by{" "}
+            {t("createdBy")}{" "}
             <a
               href="https://wa.me/201023329000"
               target="_blank"
               rel="noopener noreferrer"
               className="
-      font-bold
-      bg-gradient-to-r
-      from-yellow-500
-      to-orange-500
-      bg-clip-text
-      text-transparent
-      hover:opacity-80
-      transition
-    "
+                font-bold
+                bg-gradient-to-r
+                from-yellow-500
+                to-orange-500
+                bg-clip-text
+                text-transparent
+                hover:opacity-80
+                transition
+              "
             >
               Ahmed Bendary
             </a>

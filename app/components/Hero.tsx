@@ -1,27 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { fadeInUp } from "../lib/animations";
 import { useScrollToSection } from "../hooks/useScrollToSection";
 
 export default function Hero() {
   const { scrollToSection } = useScrollToSection();
+  const t = useTranslations("hero");
+
   return (
     <section className="max-w-5xl mx-auto px-6 pt-24 md:pt-10 pb-24">
       <div className="text-center flex flex-col items-center">
         {/* Badge */}
         <motion.div
-          initial={{
-            opacity: 0,
-            scale: 0.95,
-          }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{
-            duration: 0.4,
-          }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4 }}
           className="
             mb-6
             px-4
@@ -35,7 +30,7 @@ export default function Hero() {
             tracking-[0.2em]
           "
         >
-          Social Media Manager
+          {t("badge")}
         </motion.div>
 
         {/* Heading */}
@@ -52,9 +47,9 @@ export default function Hero() {
             leading-[0.95]
           "
         >
-          Grow Your
+          {t("headingLine1")}
           <br />
-          Brand On Social
+          {t("headingLine2")}
           <span
             className="
               inline-block
@@ -66,21 +61,15 @@ export default function Hero() {
               text-background
             "
           >
-            Media
+            {t("headingHighlight")}
           </span>
         </motion.h1>
 
         {/* Description */}
         <motion.p
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 0.7,
-          }}
-          transition={{
-            delay: 0.4,
-          }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.7 }}
+          transition={{ delay: 0.4 }}
           className="
             mt-8
             max-w-2xl
@@ -89,24 +78,14 @@ export default function Hero() {
             leading-relaxed
           "
         >
-          Helping businesses grow through strategic content, audience
-          engagement, community management and performance-driven social media
-          campaigns.
+          {t("description")}
         </motion.p>
 
         {/* CTA */}
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 15,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            delay: 0.6,
-          }}
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
           className="
             flex
             flex-col
@@ -117,34 +96,30 @@ export default function Hero() {
         >
           <motion.button
             onClick={() => scrollToSection("work")}
-            whileHover={{
-              scale: 1.05,
-              y: -2,
-            }}
-            whileTap={{
-              scale: 0.95,
-            }}
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
             transition={{
               type: "spring",
               stiffness: 400,
               damping: 15,
             }}
             className="
-    mt-8
-    px-6
-    py-3
-    rounded-full
-    bg-foreground
-    text-background
-    font-medium
-    shadow-lg
-    relative
-    overflow-hidden
-  "
+              mt-8
+              px-6
+              py-3
+              rounded-full
+              bg-foreground
+              text-background
+              font-medium
+              shadow-lg
+              relative
+              overflow-hidden
+            "
           >
-            <span className="relative z-10"> MY WORK</span>
+            <span className="relative z-10">
+              {t("myWorkButton")}
+            </span>
 
-            {/* Shine Effect */}
             <motion.span
               initial={{ x: "-100%" }}
               whileHover={{ x: "200%" }}
@@ -153,18 +128,16 @@ export default function Hero() {
                 ease: "easeInOut",
               }}
               className="
-      absolute
-      inset-0
-      bg-gradient-to-r
-      from-transparent
-      via-white/30
-      to-transparent
-      skew-x-12
-    "
+                absolute
+                inset-0
+                bg-gradient-to-r
+                from-transparent
+                via-white/30
+                to-transparent
+                skew-x-12
+              "
             />
           </motion.button>
-
-      
         </motion.div>
 
         {/* Stats */}
@@ -179,21 +152,24 @@ export default function Hero() {
           "
         >
           <div>
-            <h3 className="text-3xl md:text-4xl font-black">100+</h3>
-
-            <p className="text-sm opacity-60 mt-2">Accounts Managed</p>
+            <h3 className="text-3xl md:text-4xl font-black">50+</h3>
+            <p className="text-sm opacity-60 mt-2">
+              {t("stats.accounts")}
+            </p>
           </div>
 
           <div>
             <h3 className="text-3xl md:text-4xl font-black">10M+</h3>
-
-            <p className="text-sm opacity-60 mt-2">Content Views</p>
+            <p className="text-sm opacity-60 mt-2">
+              {t("stats.views")}
+            </p>
           </div>
 
           <div>
             <h3 className="text-3xl md:text-4xl font-black">500%</h3>
-
-            <p className="text-sm opacity-60 mt-2">Growth Achieved</p>
+            <p className="text-sm opacity-60 mt-2">
+              {t("stats.growth")}
+            </p>
           </div>
         </div>
       </div>
