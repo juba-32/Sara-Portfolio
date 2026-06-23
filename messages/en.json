@@ -136,7 +136,76 @@
     "footerRole": "Social Media Manager • Content Strategist",
 
     "createdBy": "Created & Designed by"
+  },
+  
+  "offers": {
+    "badge": "Packages",
+    "title": "MY OFFERS",
+    "subtitle": "Flexible social media management packages tailored for businesses looking to grow their online presence.",
+
+    "mostPopular": "MOST POPULAR",
+    "perMonth": "/month",
+    "getStarted": "Get Started",
+
+    "packages": {
+      "starter": {
+        "name": "Starter Launch",
+        "features": [
+          "6–8 Posts",
+          "2–4 Reels",
+          "Daily Stories Setup",
+          "Comment Replies Only"
+        ]
+      },
+
+      "premium": {
+        "name": "Premium Launch",
+        "features": [
+          "8–12 Posts",
+          "4–6 Reels",
+          "Interactive Stories",
+          "Comments & DMs Replies"
+        ]
+      },
+
+      "growth": {
+        "name": "Growth & Engagement",
+        "features": [
+          "12–16 Posts",
+          "6–8 Reels",
+          "Daily Community Stories",
+          "Comments & DMs Replies"
+        ]
+      },
+
+      "elite": {
+        "name": "Elite Account Management",
+        "features": [
+          "24 Posts",
+          "8–10 Reels",
+          "Advanced Stories",
+          "Full Community Management"
+        ]
+      }
+    },
+
+    "termsTitle": "Terms & Working Hours",
+
+    "workingDays": "Working Days",
+    "workingDaysValue": "Sunday – Thursday",
+
+    "daysOff": "Days Off",
+    "daysOffValue": "Friday & Saturday",
+
+    "availability": "Availability",
+    "availabilityValue": "9 hours daily for account monitoring and responses.",
+
+    "responsePolicy": "Messages received outside working hours will be answered on the next business day.",
+
+    "outOfScope": "Not Included",
+    "outOfScopeValue": "Influencer marketing, paid ads management, professional photography or videography services."
   }
+
 
 
 }

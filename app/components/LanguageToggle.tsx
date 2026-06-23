@@ -1,5 +1,4 @@
 "use client";
-
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -7,12 +6,9 @@ export default function LanguageToggle() {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
-
   const toggleLanguage = () => {
     const nextLocale = locale === "ar" ? "en" : "ar";
-
     const pathWithoutLocale = pathname.replace(/^\/(en|ar)/, "");
-
     router.replace(`/${nextLocale}${pathWithoutLocale}`);
   };
 
