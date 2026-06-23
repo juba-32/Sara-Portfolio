@@ -30,17 +30,17 @@ export const projects: Project[] = [
       {
         title: "posts",
         images: [
-          "/assets/rimas-1.avif",
-          "/assets/rimas-2.avif",
-          "/assets/rimas-3.avif",
+          "/assets/rimas-a.webp",
+          "/assets/rimas-b.webp",
+          "/assets/rimas-c.webp",
         ],
       },
       {
         title: "insights",
         images: [
-          "/assets/insights-1.avif",
-          "/assets/insights-2.avif",
-          "/assets/insights-3.avif",
+          "/assets/rimas-ins-1.webp",
+          "/assets/rimas-ins-2.webp",
+          "/assets/rimas-ins-3.webp",
         ],
       },
     ],

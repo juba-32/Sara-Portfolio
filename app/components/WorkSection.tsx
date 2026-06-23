@@ -3,19 +3,15 @@
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-
 import { projects } from "../data/projects";
 import { Project } from "../types";
-
 import ProjectCard from "../components/ui/ProjectCard";
 import ProjectModal from "../components/ui/ProjectModal";
 
 export default function WorkSection() {
   const t = useTranslations("work");
-
   const [activeFilter, setActiveFilter] = useState("all");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
   const filters = useMemo(() => {
     return ["all", ...new Set(projects.map((p) => p.category))];
   }, []);
