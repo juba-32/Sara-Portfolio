@@ -1,8 +1,12 @@
 "use client";
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function LanguageToggle() {
+  useEffect(() => {
+  console.log("Mounted");
+}, []);
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();

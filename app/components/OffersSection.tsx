@@ -55,7 +55,6 @@ export default function OffersSection() {
             {t("subtitle")}
           </p>
         </motion.div>
-        {/* Packages */}
         <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
           {packages.map((pkg, index) => {
             const packageName = t(`packages.${pkg.key}.name`);
@@ -92,7 +91,7 @@ export default function OffersSection() {
                   <div
                     className="
                       absolute
-                      top-5
+                      top-2
                       right-5
                       px-3
                       py-1

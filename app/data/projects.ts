@@ -75,19 +75,18 @@ export const projects: Project[] = [
       {
         title: "posts",
         images: [
-          "/assets/rimas-1.avif",
-          "/assets/adidas/post2.jpg",
-          "/assets/adidas/post3.jpg",
-          "/assets/adidas/post4.jpg",
+          "/assets/nasij-1.webp",
+          "/assets/nasij-2.webp",
+          "/assets/nasij-3.webp",
         ],
       },
       {
         title: "insights",
         images: [
-          "/assets/adidas/story1.jpg",
-          "/assets/adidas/story2.jpg",
-          "/assets/adidas/story3.jpg",
-          "/assets/adidas/story4.jpg",
+          "/assets/nasij-ins-2.webp",
+          "/assets/nasij-ins-1.webp",
+          "/assets/nasij-ins-3.webp",
+          "/assets/nasij-ins-4.webp",
         ],
       },
     ],
@@ -122,18 +121,16 @@ export const projects: Project[] = [
       {
         title: "posts",
         images: [
-          "/assets/adidas/post1.jpg",
-          "/assets/adidas/post2.jpg",
-          "/assets/adidas/post3.jpg",
-          "/assets/adidas/post4.jpg",
+          "/assets/cheket-1.webp",
+          "/assets/cheket-2.webp",
+          "/assets/cheket-3.webp",
         ],
       },
       {
         title: "insights",
         images: [
-          "/assets/adidas/story1.jpg",
-          "/assets/adidas/story2.jpg",
-          "/assets/adidas/story3.jpg",
+          "/assets/cheket-ins-1.webp",
+          "/assets/cheket-ins-2.webp",
         ],
       },
     ],

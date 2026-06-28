@@ -8,11 +8,7 @@ interface Props {
   icon: React.ElementType;
 }
 
-export default function OfferCard({
-  title,
-  desc,
-  icon: Icon,
-}: Props) {
+export default function OfferCard({ title, desc, icon: Icon }: Props) {
   return (
     <motion.div
       whileHover={{
@@ -45,13 +41,9 @@ export default function OfferCard({
         <Icon size={22} />
       </div>
 
-      <h3 className="text-3xl font-black uppercase mb-4">
-        {title}
-      </h3>
+      <h3 className="text-3xl font-black uppercase mb-4">{title}</h3>
 
-      <p className="text-muted-foreground leading-relaxed">
-        {desc}
-      </p>
+      <p className="text-muted-foreground leading-relaxed">{desc}</p>
     </motion.div>
   );
 }
