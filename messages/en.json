@@ -52,7 +52,8 @@
     "clients": {
       "rimasTravel": "RIMA'S TRAVEL",
       "nasijAlJamal": "Nasij Al Jamal",
-      "chicket": "Chicket"
+      "chicket": "Chicket",
+      "tonys": "TONYS"
     },
 
     "industries": {
@@ -115,26 +116,17 @@
   
   "contact": {
     "available": "Available For Freelance Work",
-
     "titleLine1": "Ready To Grow",
     "titleLine2": "Your Brand?",
-
     "emailMe": "Email Me",
-
     "brand": "SARAH",
-
     "about": "Social Media Manager helping brands grow through strategic content, audience engagement and performance-driven campaigns.",
-
     "sitemap": "Sitemap",
-
     "contact": "Contact",
-
     "linkedin": "LinkedIn",
     "instagram": "Instagram",
     "whatsapp": "WhatsApp",
-
     "footerRole": "Social Media Manager • Content Strategist",
-
     "createdBy": "Created & Designed by"
   },
   

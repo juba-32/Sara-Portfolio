@@ -33,22 +33,20 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html
+    <div
       lang={locale}
       dir={locale === "ar" ? "rtl" : "ltr"}
-      suppressHydrationWarning
+      className={jakarta.className}
     >
-      <body className={jakarta.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem={false}
-        >
-          <NextIntlClientProvider messages={messages}>
-            {children}
-          </NextIntlClientProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="dark"
+        enableSystem={false}
+      >
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </ThemeProvider>
+    </div>
   );
 }

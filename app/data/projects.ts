@@ -11,7 +11,7 @@ export const projects: Project[] = [
     metrics: [
       {
         label: "followers",
-        value: "+11K",
+        value: "+60K",
       },
       {
         label: "engagement",
@@ -56,7 +56,7 @@ export const projects: Project[] = [
     metrics: [
       {
         label: "followers",
-        value: "+15K",
+        value: "+2050K",
       },
       {
         label: "engagement",
@@ -64,7 +64,7 @@ export const projects: Project[] = [
       },
       {
         label: "sales",
-        value: "+48%",
+        value: "+65%",
       },
     ],
 
@@ -96,13 +96,13 @@ export const projects: Project[] = [
     id: 3,
     client: "chicket",
     industry: "foodBeverage",
-    category: "tiktok",
+    category: "instagram",
     challenge: "lowEngagement",
 
     metrics: [
       {
         label: "followers",
-        value: "+9K",
+        value: "+100K",
       },
       {
         label: "engagement",
@@ -131,6 +131,51 @@ export const projects: Project[] = [
         images: [
           "/assets/cheket-ins-1.webp",
           "/assets/cheket-ins-2.webp",
+        ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    client: "tonys",
+    industry: "foodBeverage",
+    category: "instagram",
+    challenge: "lowEngagement",
+
+    metrics: [
+      {
+        label: "followers",
+        value: "+100K",
+      },
+      {
+        label: "engagement",
+        value: "+42%",
+      },
+      {
+        label: "sales",
+        value: "+34%",
+      },
+    ],
+
+    logo: "/assets/chicket-logo.png",
+    layout: "standard",
+
+    galleries: [
+      {
+        title: "posts",
+        images: [
+          "/assets/tony1.webp",
+          "/assets/tony2.webp",
+          "/assets/tony3.webp",
+
+        ],
+      },
+      {
+        title: "insights",
+        images: [
+          "/assets/tony-ins-1.webp",
+          "/assets/tony-ins-2.webp",
+          "/assets/tony-ins-3.webp",
         ],
       },
     ],
